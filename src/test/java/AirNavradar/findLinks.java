@@ -20,6 +20,8 @@ public class findLinks {
 		driver.get("https://www.airnavradar.com//");
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		WebElement consent=driver.findElement(By.xpath("//p[text()='Consent']"));
+		consent.click();
 		List<WebElement> links=driver.findElements(By.tagName("a"));
 		
 
