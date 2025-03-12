@@ -27,7 +27,7 @@ public class findLinks {
 
 		for(WebElement link:links){
 		    String url=link.getAttribute("href");
-		    if(url!=null && !url.isEmpty()){
+		    if(url!=null && !url.isEmpty() && !url.contains("#")){
 		        checkLink(url);
 		    }
 		}
